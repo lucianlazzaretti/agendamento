@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+
+    <EditText
+        android:id="@+id/edPaciente"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"
+        android:hint="Filtrar por Paciente"
+        android:textColorHint="#90a4ae"
+        android:textColor="#0d47a1"
+        android:layout_marginTop="30dp"/>
+
+
+    <EditText
+        android:id="@+id/edAgendamento"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"
+        android:hint="Filtrar por Data de Agendamento"
+        android:textColorHint="#90a4ae"
+        android:textColor="#0d47a1"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/edPaciente" />
+
+
+
+    <EditText
+        android:id="@+id/edDoutor"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"
+        android:hint="Filtrar por Médico"
+        android:textColor="#0d47a1"
+        android:textColorHint="#90a4ae"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/edAgendamento"/>
+
+    <Button
+        android:id="@+id/listar"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center|center_vertical"
+        android:textColor="#383C70"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:onClick="listar"
+        android:text="CONSULTAR"
+        android:textAlignment="center"
+        android:drawableLeft="@drawable/busca"
+        android:layout_below="@id/edDoutor"
+        android:background="#bbdefb"/>
+
+
+    <ListView
+        android:id="@+id/lstConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="348dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/listar"/>
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Betta System 2020 - Todos os direitos Reservados"
+        android:textSize = "12dp"
+        android:textColor="#90a4ae"
+        android:layout_below="@id/lstConsulta"/>
+
+
+
+
+</RelativeLayout>
