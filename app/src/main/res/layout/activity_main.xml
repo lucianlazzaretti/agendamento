@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
         android:layout_below="@id/imageView"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="Nome do Paciente"
         android:textColor="#0d47a1"
         android:textSize="18dp"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
         android:layout_below="@id/edNome"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="0dp"
         android:text="Data/Hora do Agendamento"
         android:textColor="#0d47a1"
         android:textSize="18dp"
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
         android:layout_below="@id/edHorario"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="0dp"
         android:text="Médico Responsável"
         android:textColor="#0d47a1"
         android:textSize="18dp"
@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
         android:layout_below="@id/edMedico"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="0dp"
         android:text="Número Celular do Paciente "
         android:textColor="#0d47a1"
         android:textSize="18dp"
@@ -102,18 +102,17 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:inputType="text"
+        android:inputType="phone"
         android:textColorHint="#90a4ae"
         android:textColor="#0d47a1"
-        android:layout_below="@id/celular"/>
-
-
+        android:layout_below="@id/celular"
+        android:ems="10" />
 
     <Button
         android:id="@+id/btnMarcar"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:gravity="center|center_vertical"
         android:textColor="#383C70"
         android:background="#bbdefb"
@@ -152,6 +151,8 @@
         android:textSize = "12dp"
         android:textColor="#90a4ae"
         android:layout_below="@id/btnConsultar"/>
+
+
 
 
 </RelativeLayout>

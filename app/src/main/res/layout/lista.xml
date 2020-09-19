@@ -5,18 +5,39 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <TextView
+        android:id="@+id/tvCampoNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome:"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="20dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvNome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
         android:textSize="16dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@id/tvCampoNome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCampoAgendamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agendamento:"
         android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvCampoNome" />
 
     <TextView
         android:id="@+id/tvAgendamento"
@@ -25,8 +46,21 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvCampoAgendamento"
         app:layout_constraintTop_toBottomOf="@+id/tvNome" />
+
+    <TextView
+        android:id="@+id/tvCampoMedico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Médico:"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCampoAgendamento" />
+
 
     <TextView
         android:id="@+id/tvMedico"
@@ -35,8 +69,20 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvCampoMedico"
         app:layout_constraintTop_toBottomOf="@+id/tvAgendamento" />
+
+    <TextView
+        android:id="@+id/tvCampoCelular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celular:"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCampoMedico" />
 
     <TextView
         android:id="@+id/tvCelular"
@@ -45,7 +91,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvCampoCelular"
         app:layout_constraintTop_toBottomOf="@+id/tvMedico" />
 
     <CheckBox
@@ -53,9 +99,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
         android:text="Finalizar Atendimento"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCelular" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCampoCelular" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

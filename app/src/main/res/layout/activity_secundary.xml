@@ -9,19 +9,16 @@
     tools:context=".MainActivity">
 
 
-
-
     <EditText
         android:id="@+id/edPaciente"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:inputType="text"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="Filtrar por Paciente"
-        android:textColorHint="#90a4ae"
+        android:inputType="text"
         android:textColor="#0d47a1"
-        android:layout_marginTop="30dp"/>
-
+        android:textColorHint="#90a4ae" />
 
     <EditText
         android:id="@+id/edAgendamento"
@@ -32,10 +29,8 @@
         android:hint="Filtrar por Data de Agendamento"
         android:textColorHint="#90a4ae"
         android:textColor="#0d47a1"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:layout_below="@id/edPaciente" />
-
-
 
     <EditText
         android:id="@+id/edDoutor"
@@ -46,7 +41,7 @@
         android:hint="Filtrar por Médico"
         android:textColor="#0d47a1"
         android:textColorHint="#90a4ae"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:layout_below="@id/edAgendamento"/>
 
     <Button
@@ -59,7 +54,7 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:onClick="listar"
-        android:text="CONSULTAR"
+        android:text="BUSCAR"
         android:textAlignment="center"
         android:drawableLeft="@drawable/busca"
         android:layout_below="@id/edDoutor"
@@ -70,26 +65,40 @@
         android:id="@+id/lstConsulta"
         android:layout_width="match_parent"
         android:layout_height="348dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:divider="@null"
+        android:layout_below="@id/listar"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
         android:dividerHeight="0dp"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/listar"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/id"
-        android:layout_width="300dp"
+    </ListView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonFinalizar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Betta System 2020 - Todos os direitos Reservados"
-        android:textSize = "12dp"
-        android:textColor="#90a4ae"
+        android:layout_alignRight="@id/listar"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="finalizar"
+        app:srcCompat="@drawable/finalize"
+        app:backgroundTint="#bbdefb"
         android:layout_below="@id/lstConsulta"/>
 
-
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lstConsulta"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toStartOf="@id/buttonFinalizar"
+        android:clickable="true"
+        android:onClick="voltar"
+        app:backgroundTint="#bbdefb"
+        app:layout="@id/buttonFinalizar"
+        app:srcCompat="@drawable/volta" />
 
 </RelativeLayout>
